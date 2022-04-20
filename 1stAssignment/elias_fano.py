@@ -35,7 +35,7 @@ with open(fname, 'r') as f:
     if len(L) % 8 != 0:  # if not multiple of 8
         L = L.ljust(len(L) + 8 - (len(L) % 8), "0")  # make it reach a multiple of 8 by 0s left filling
     print("L")
-    for i in range(0, len(L)-1, 8):  # print 8 bits per line
+    for i in range(0, len(L), 8):  # print 8 bits per line
         print(L[i:i+8])  # slicing: print chars with index from i to i+7
 
     # calculating array U ----------------------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ with open(fname, 'r') as f:
     if len(U) % 8 != 0:  # if not multiple of 8
         U = U.ljust(len(U) + 8 - (len(U) % 8), "0")  # make it reach a multiple of 8 by 0s left filling
     print("U")
-    for i in range(0, len(U) - 1, 8):  # print 8 bits per line
+    for i in range(0, len(U), 8):  # print 8 bits per line
         print(U[i:i+8])  # slicing: print chars with index from i to i+7
 
     # SHA-256 hash code ------------------------------------------------------------------------------------------------
